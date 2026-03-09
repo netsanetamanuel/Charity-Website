@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Frontend/asset/logo-removebg-preview.png">
     <title>Charity</title>
+    
+    <!-- Font Awesome 6 Free -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/Frontend/SCSS/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +19,8 @@
     <header>
         
              <a class="logo">  
-                <img class="logo--img" src="/Frontend/asset/logo-removebg-preview.png" height="110px" width="105px" alt="logo">
-                <span class="logo--txt">kuku care</span>
+                <img class="logo__img" src="/Frontend/asset/logo-removebg-preview.png" height="110px" width="105px" alt="logo">
+                <span class="logo__txt">kuku care</span>
             </a>
         
 
@@ -28,22 +32,34 @@
              <li><a href="#">Contact</a></li>
         </ul>
 
-        <div>
-            <button class="btn_involved">Get Involved</button>
-            <button class="btn__donate">Donate</button>
+        <div class="cta__btn">
+            <button class="cta__btn--donate">
+                 <span class="cta__btn--txt">Donate</span>
+                <i class="fa-solid fa-hand-holding-medical" style="color: rgb(213, 206, 236)"></i>
+            </button>
+           
         </div>
         
     </header>
     
 
-    <section class="hero">
-        <h1 class="aboutus">About Us</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     <section class="home">
+        <div class="home__content">
+            <h1 class="home__content--h1">We care</h1>
+             <p class="home__content--txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
              <br>Quos nostrum ipsum neque doloribus quidem fugit animi, minus unde deleniti cum provident maxime vero,
               praesentium iusto omnis alias eum corporis dignissimos.</p>
-             <button>SignUp</button>
-
+             <button class="home__content--btn">SignUp</button>
+        </div>
     </section>
+   
+    <section class="achievments">
+        <div class="achievments__one">
+            <p>Lorem ipsum, dolo tempora facilis. Aspernatur corporis, temporibus doloremque harum hic eveniet. Quisquam, illo?</p>
+            <button>read more</button>
+        </div>
+    </section>
+
    
     
 </body>
