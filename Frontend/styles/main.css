@@ -8,12 +8,17 @@ body {
   height: 100vh;
   width: auto;
   height: 100vh;
-  background: linear-gradient(to top right, rgba(165, 206, 238, 0.151), rgba(106, 209, 204, 0.404)), url(/Frontend/asset/background.jpg);
+  background: linear-gradient(to top right, rgba(165, 206, 238, 0.37), rgba(106, 209, 204, 0.404)), url(/Frontend/asset/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 800px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: auto;
+  gap: 10px;
 }
 body header {
+  grid-row: 1/2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +79,7 @@ body header .nav_bar li a:hover {
 }
 body header .cta__btn {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 body header .cta__btn--donate {
   position: relative;
@@ -130,11 +135,11 @@ body header .cta__btn--donate i {
 body header .cta__btn--donate:hover i {
   transform: scale(1.1) rotate(5deg);
 }
-@keyframes pulse {
+@keyframes btn-anime {
   0% {
     box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
   }
-  70% {
+  50% {
     box-shadow: 0 0 0 15px rgba(102, 126, 234, 0);
   }
   100% {
@@ -142,7 +147,7 @@ body header .cta__btn--donate:hover i {
   }
 }
 body header .cta__btn--donate {
-  animation: pulse 2s infinite;
+  animation: btn-anime 2s infinite;
 }
 body header .cta__btn--donate:hover {
   animation: none;
@@ -150,10 +155,87 @@ body header .cta__btn--donate:hover {
 body .home {
   width: 100%;
   height: 100%;
+  grid-row: 2/3;
+}
+body .home__content {
+  padding: 100px 20px;
+  margin: 20px 70px;
+}
+body .home__content--h1 {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 10px;
+  color: #251e53;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+body .home__content--txt {
+  padding: 10px 3px 10px 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  line-height: 27px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 90%;
+  color: #131027;
+}
+body .home__content--btn {
+  padding: 15px 40px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #021c46;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 400px;
+  box-shadow: 0 4px 15px rgba(93, 115, 214, 0.4);
+  background: linear-gradient(145deg, #667eea 50%, #764ba2 100%);
+  transition: all 0.4s ease-in-out;
+}
+body .home__content--btn:active {
+  transform: translateY(2.5px);
+}
+body .home__content--btn:hover {
+  background: linear-gradient(135deg, #3e59d4 50%, #50227e 100%);
 }
 body .achievments {
-  background-color: red;
-  height: 50px;
-  padding: 90px 10px;
+  height: auto;
+  margin: 0 20px;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 20px;
+}
+body .achievments__one, body .achievments__two, body .achievments__three {
+  background-color: rgb(0, 183, 255);
+  min-width: 100px;
+  min-height: 200px;
+}
+body .aboutus {
+  height: 70vh;
+  margin-top: 39px;
+  background-color: darkcyan;
+  grid-row: 4/5;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+body .aboutus__content {
+  background-color: #021c46;
+  width: 50%;
   margin: 10px;
+}
+body .aboutus__gallery {
+  background-color: #3e59d4;
+  margin: 10px;
+  width: 50%;
+}
+body .footer {
+  grid-row: 5/6;
+  height: 40vh;
+  background-color: rgb(59, 70, 78);
 }/*# sourceMappingURL=main.css.map */
