@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -193,49 +194,171 @@ body .home__content--btn {
   font-weight: 400px;
   box-shadow: 0 4px 15px rgba(93, 115, 214, 0.4);
   background: linear-gradient(145deg, #667eea 50%, #764ba2 100%);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in;
 }
 body .home__content--btn:active {
-  transform: translateY(2.5px);
+  transform: translateY(3.5px);
 }
 body .home__content--btn:hover {
   background: linear-gradient(135deg, #3e59d4 50%, #50227e 100%);
 }
 body .achievments {
   height: auto;
-  margin: 0 20px;
+  margin: 15px 35px;
   grid-row: 3/4;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: row;
   gap: 20px;
 }
 body .achievments__one, body .achievments__two, body .achievments__three {
-  background-color: rgb(0, 183, 255);
-  min-width: 100px;
+  background-color: rgb(149, 187, 201);
+  padding: 25px 30px;
+  margin: 10px 10px;
+  min-width: 80px;
   min-height: 200px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body .achievments__one i, body .achievments__two i, body .achievments__three i {
+  align-self: center;
+  font-size: 35px;
+}
+body .achievments__one h3, body .achievments__two h3, body .achievments__three h3 {
+  align-self: center;
+}
+body .achievments__one button, body .achievments__two button, body .achievments__three button {
+  align-self: flex-end;
 }
 body .aboutus {
-  height: 70vh;
-  margin-top: 39px;
-  background-color: darkcyan;
+  height: 110vh;
+  margin-top: 30px;
   grid-row: 4/5;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  background-color: rgba(181, 191, 206, 0.1921568627);
 }
 body .aboutus__content {
-  background-color: #021c46;
   width: 50%;
+  height: auto;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .aboutus__content--title {
+  align-self: center;
+  width: auto;
+  margin-right: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #021c46;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+}
+body .aboutus__content--title::before {
+  content: "◈⚊◈⚊◈";
+  position: relative;
+  bottom: 25px;
+  left: 15px;
+  color: #667eea;
+}
+body .aboutus__content--title::after {
+  content: "◈⚊◈⚊◈";
+  position: relative;
+  top: 40px;
+  right: 20px;
+  color: #667eea;
+}
+body .aboutus__content--container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 75px 25px;
+  padding: 50px 10px;
+}
+body .aboutus__content--container i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #667eea;
+  border: 3px solid #667eea;
+  border-radius: 50%;
+  height: 50%;
   margin: 10px;
+  padding: 17px 15px;
+}
+body .aboutus__content--container--mission, body .aboutus__content--container--vision, body .aboutus__content--container--values {
+  display: flex;
+  gap: 30px;
+}
+body .aboutus__content--container--mission--txt h2, body .aboutus__content--container--vision--txt h2, body .aboutus__content--container--values--txt h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
+}
+body .aboutus__content--container--mission--txt p, body .aboutus__content--container--vision--txt p, body .aboutus__content--container--values--txt p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 480;
+  margin-top: 10px;
+  width: 100%;
+}
+body .aboutus__content--container--mission {
+  margin-left: 70px;
 }
 body .aboutus__gallery {
-  background-color: #3e59d4;
-  margin: 10px;
+  grid-row: 5/6;
+  margin: 125px 20px;
+  padding: 15px 10px;
   width: 50%;
+  height: 100%;
+  overflow: hidden;
+  gap: 20px;
+}
+body .aboutus__gallery--container {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+body .aboutus__gallery--container--img1, body .aboutus__gallery--container--img2, body .aboutus__gallery--container--img3 {
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 23rem;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 5px solid transparent;
+  transform-origin: center;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in-out;
+}
+body .aboutus__gallery--container--img1:hover, body .aboutus__gallery--container--img2:hover, body .aboutus__gallery--container--img3:hover {
+  transform: scale(1.11);
+  border-color: #5f7af1;
+  padding: 7px;
+  opacity: 1;
+  z-index: 10000;
+  border-radius: 10px;
+}
+body .aboutus__gallery--container--img1 {
+  top: 10px;
+  left: 10px;
+}
+body .aboutus__gallery--container--img2 {
+  top: 90px;
+  right: 20px;
+}
+body .aboutus__gallery--container--img3 {
+  top: 200px;
+  left: 100px;
 }
 body .footer {
   grid-row: 5/6;
-  height: 40vh;
+  height: 60vh;
   background-color: rgb(59, 70, 78);
 }/*# sourceMappingURL=main.css.map */

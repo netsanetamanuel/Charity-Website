@@ -257,11 +257,11 @@ body{
                 font-weight: 400px;
                  box-shadow: 0 4px 15px rgba(93, 115, 214, 0.4);
                  background:linear-gradient(145deg, #667eea 50%, #764ba2 100%);
-                 transition:  all 0.4s ease-in-out;
+                 transition:  all 0.2s ease-in;
                               
 
                  &:active{
-                     transform: translateY(2.5px);
+                     transform: translateY(3.5px);
                  }
                  &:hover{
                     background: linear-gradient(135deg,#3e59d4 50%,#50227e 100%);
@@ -280,27 +280,48 @@ body{
 
     .achievments{
         height: auto;
-        margin: 0 20px;
+        margin: 15px 35px;
         grid-row: 3/4;
-       
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-direction: row;
+       
         gap: 20px;
         
        
         
 
         &__one,&__two,&__three{
-            background-color: rgb(0, 183, 255);
-            min-width: 100px;
+            background-color: rgb(149, 187, 201);
+            padding: 25px 30px;
+            margin: 10px 10px;
+            min-width: 80px;
             min-height: 200px;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            
            
+            
+            i{
+               //display: block;
+               align-self: center;
+               font-size: 35px;
+            }
+
+           h3{
+                align-self: center;
+
+
+           }
             p{
 
             }
             button{
-                
+                align-self: flex-end;
             }
             
         }
@@ -308,31 +329,166 @@ body{
     }
 
     .aboutus{
-       height: 70vh;
-       margin-top: 39px;
-       background-color: darkcyan;
+       height: 110vh;
+       margin-top: 30px;
        grid-row: 4/5;
        display: flex;
        justify-content: space-between;
        gap: 20px;
+       background-color: #b5bfce31;
       
 
        &__content{
-        background-color: #021c46;
         width: 50%;
-        margin: 10px;
+        height: auto;
+        margin: 10px 10px;
+        padding: 10px 10px;
+      
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--title{
+            align-self: center;
+            width: auto;
+            margin-right: 80px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #021c46;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: absolute;
+             &::before{
+                content: "\25C8 \268A \25C8 \268A \25C8";
+                position: relative;
+                bottom: 25px;
+                left:15px;
+                color: #667eea;
+                
+                
+                
+            }
+            &::after{
+                content: "\25C8 \268A \25C8 \268A \25C8";
+                position: relative;
+                top: 40px;
+                right:20px;
+                color: #667eea;
+            }
+        }
+       
+        &--container{
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin: 75px 25px;
+            padding: 50px 10px;
+
+
+            
+            i{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                color: #667eea;
+                border: 3px solid #667eea;
+                border-radius: 50%;
+                height: 50%;
+                margin: 10px;
+                padding: 17px 15px;
+            }
+           
+
+            &--mission,&--vision,&--values{
+                display: flex;
+                gap: 30px;
+                &--txt{
+                     h2{
+                        font-family: Verdana, Geneva, Tahoma, sans-serif;
+                        letter-spacing: 2px;
+                     }
+                    p{
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                        font-weight: 480;
+                        margin-top: 10px;
+                        width: 100%;
+                        
+                    }
+                }
+            }
+             &--mission{
+                margin-left: 70px;
+                
+                
+             }
+        }
+
         
        }
+
        &__gallery{
-        background-color: #3e59d4;
-        margin: 10px;
+        grid-row: 5/6;
+        margin: 125px 20px;
+        padding: 15px 10px;
         width: 50%;
+        height: 100%;
+        overflow: hidden;
+        gap: 20px;
+
+        &--container{
+            position: relative;
+            width: auto;
+            height: auto;
+            
+               &--img1,&--img2,&--img3{
+                    position: absolute;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    width: 23rem;
+                    height: 15rem;
+                    object-fit: cover;
+                    border: 5px solid transparent;
+                    transform-origin: center;
+                    transition: transform .3s ease-in,opacity .3s ease-in-out;
+                    
+                    &:hover{
+                    transform: scale(1.11);
+                    border-color: #5f7af1;
+                    padding: 7px;
+                    opacity: 1;
+                    z-index: 10000;
+                    border-radius: 10px;
+                }
+                
+               
+                   
+            }
+            
+          
+            &--img1{
+                top: 10px;
+                left: 10px;
+            }
+             &--img2{
+              
+                top: 90px;
+                right: 20px; 
+            }
+             &--img3{
+             
+                top: 200px;
+                left: 100px;
+            
+            }
+
+        }
+ 
        }
     }
 
     .footer{
         grid-row: 5/6;
-        height: 40vh;
+        height: 60vh;
         background-color: rgb(59, 70, 78);
     }
 
