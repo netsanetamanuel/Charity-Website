@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link rel="shortcut icon" href="/Frontend/asset/logo-removebg-preview.png">
     <title>Charity</title>
     
@@ -16,19 +17,18 @@
 </head>
 
 <body>
-    <header>
-        
+
+    <section class="hero">
+         <header>
              <a class="logo">  
                 <img class="logo__img" src="/Frontend/asset/logo-removebg-preview.png" height="110px" width="105px" alt="logo">
                 <span class="logo__txt">kuku care</span>
             </a>
-        
-
         <ul class="nav_bar">
             <li><a href="#">What We Do</a></li>
-            <li><a href="#">Stories</a></li>
             <li><a href="#">Event</a></li>
             <li><a href="#">Join Us</a></li>
+            <li><a href="#">Blog</a></li>
              <li><a href="#">Contact</a></li>
         </ul>
 
@@ -43,14 +43,17 @@
     </header>
     
 
-     <section class="home">
+     <div class="home">
         <div class="home__content">
             <h1 class="home__content--h1">We care</h1>
              <p class="home__content--txt">In a world where everyone is fighting their own battle, a little kindness can be the light someone desperately needs. We Care exists to spread that light 
              no questions asked, no boundaries drawn. Just pure, unconditional humanity.</p>
              <button class="home__content--btn">Sign Up</button>
         </div>
+    </div>
+
     </section>
+   
    
     <section class="achievments">
 
@@ -132,11 +135,71 @@
         </div>
 
     </section>
-    <section></section>
+    <section class="contact">
+        
+    </section>
 
-   <footer class="footer">
-    footer 
-   </footer>
+ <footer class="footer">
+    <div class="footer__container">
+        <!-- Contact Us Section (without icons) -->
+        <div class="footer__section">
+            <h3 class="footer__title">Contact Us</h3>
+            <div class="footer__contact-info">
+                <div class="footer__contact-item">
+                    <span class="footer__contact-label">📞 Phone:</span>
+                    <span>+1 234 567 8900</span>
+                </div>
+                <div class="footer__contact-item">
+                    <span class="footer__contact-label">✉️ Email:</span>
+                    <span>info@yourwebsite.com</span>
+                </div>
+                <div class="footer__contact-item">
+                    <span class="footer__contact-label">📍 Location:</span>
+                    <span>123 Street Name, City, Country</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer__section">
+            <h3 class="footer__title">Quick links</h3>
+            <ul class="footer__links">
+                <li><a href="#"><i class="fa-brands fa-facebook" style="color: rgb(177, 151, 252)"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa-brands fa-tiktok" style="color: rgb(177, 151, 252)"></i>tiktok</a></li>
+
+                <li><a href="#"><i class="fa-brands fa-telegram" style="color: rgb(177, 151, 252)"></i>telegram</a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Subscribe Section -->
+        <div class="footer__section">
+            <h3 class="footer__title">Subscribe</h3>
+            <p class="footer__subscribe-text">Simply enter your email below:</p>
+            <form class="footer__subscribe-form">
+                <input type="email" placeholder="Email" class="footer__email-input">
+                <button type="submit" class="footer__subscribe-btn">Subscribe</button>
+            </form>
+            <p class="footer__disclaimer">
+                By subscribing, you agree to receive emails from us and acknowledge our Privacy Policy.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer__bottom">
+        <div class="footer__bottom-content">
+            <p class="footer__copyright">
+                &copy; 2026 kukucare. All rights reserved
+            </p>
+            <div class="footer__legal">
+                <a href="#">Privacy Policy</a>
+                <span class="footer__separator">|</span>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
     
 </body>
 </html>
